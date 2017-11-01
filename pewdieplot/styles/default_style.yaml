@@ -1,0 +1,9 @@
+--- # Default Style
+   lineColors:
+     - "#8cbfd0"
+     - "#958cd0"
+     - "#8cd09d"
+   fillColors:
+     - "#d6ebf2"
+     - "#d9d6f2"
+     - "#d6f2dd"
