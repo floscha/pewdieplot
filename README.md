@@ -34,3 +34,17 @@ PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
 ```
 
 ![alt text](./images/scatterplot_example.png)
+
+### Bar Chart Example
+```python
+(BarChart(title='Bar Chart Example', size=(8, 5))
+ .xlim(-0.5, 3.5)
+ .xticks(np.arange(0, 4))
+ .xlabel_fn(lambda n: x_tick_labels[n])
+ .yticks(np.arange(0, 4, 0.5))
+ .legends(['Blue', 'Purple', 'Green'])
+ .data(data)
+ ).show()
+```
+
+![alt text](./images/barchart_example.png)
