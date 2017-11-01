@@ -63,7 +63,3 @@ class ScatterPlot(Graph):
             plt.legend(handles, self._legend_labels)
 
         return self
-
-    def show(self):
-        """Display the graph."""
-        super(ScatterPlot, self).show()

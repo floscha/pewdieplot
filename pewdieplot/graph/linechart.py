@@ -55,7 +55,3 @@ class LineChart(Graph):
             plt.legend(handles, self._legend_labels)
 
         return self
-
-    def show(self):
-        """Display the graph."""
-        super(LineChart, self).show()
