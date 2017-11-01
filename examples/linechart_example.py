@@ -26,6 +26,7 @@ all_points = np.concatenate((sin_points, cos_points, tan_points))
  .xticks(np.arange(0, 2 * np.pi + 0.1, 0.5 * np.pi))
  .yticks(np.arange(-5, 5, 1))
  .xlabel_fn(lambda n: r'$%s\pi$' % Fraction(n / np.pi))
+ .legends(['Sine', 'Cosine', 'Tangent'])
  .data(all_points)
  .pyplot('annotate', 'Sine Max', xy=(0.5 * np.pi, 1), xytext=(2.5, 2),
          arrowprops=dict(facecolor='black', shrink=0.05))

@@ -14,6 +14,14 @@ class LineChart(Graph):
         # Pass dict of constructor arguments to super class.
         super(LineChart, self).__init__(*args, **kwargs)
 
+        self._legend_labels = []
+
+    def legends(self, legend_labels, position=None):
+        """."""
+        self._legend_labels = legend_labels
+
+        return self
+
     def data(self, lines):
         """Set the data for the lines to be plotted."""
         # Check data format.
@@ -34,12 +42,17 @@ class LineChart(Graph):
 
         self._prepare_plot(0, 2 * np.pi, -1, 1)
 
+        handles = []
         for i, line in enumerate(lines):
             x, y = line[:, 0], line[:, 1]
-            plt.plot(x, y,
-                     c=self.style.line_colors[i],
-                     lw=3,
-                     alpha=0.7)
+            h, = plt.plot(x, y,
+                          c=self.style.line_colors[i],
+                          lw=3,
+                          alpha=0.7)
+            handles.append(h)
+
+        if self._legend_labels:
+            plt.legend(handles, self._legend_labels)
 
         return self
 
