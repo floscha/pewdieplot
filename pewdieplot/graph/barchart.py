@@ -16,12 +16,6 @@ class BarChart(Graph):
 
         self._legend_labels = []
 
-    def legends(self, legend_labels, position=None):
-        """."""
-        self._legend_labels = legend_labels
-
-        return self
-
     def data(self, bar_data, overlapping=False):
         """Set the data for the line_data to be plotted."""
         # Check data format.

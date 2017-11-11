@@ -17,7 +17,7 @@ class ScatterPlot(Graph):
         self._area = 10 ** 2
         self._legend_labels = []
         # Initialize color function with identity.
-        self._color_function = lambda x: x
+        self._color_function = lambda c, ps: c
 
     def area(self, area):
         """Set the area of the circles."""
@@ -26,10 +26,6 @@ class ScatterPlot(Graph):
     def color_function(self, function):
         """Apply the given function to x and y, producing a color as output."""
         self._color_function = function
-
-    def legends(self, legend_labels, position=None):
-        """."""
-        self._legend_labels = legend_labels
 
         return self
 
@@ -52,10 +48,16 @@ class ScatterPlot(Graph):
         handles = []
         for i, ps in enumerate(points):
             x, y = zip(*ps)
+
+            fill_colors = self._color_function(self.style.fill_colors[i], ps)
+            # Use darkened fill color for edges.
+            edge_colors = fill_colors ** 0.8
+            edge_colors = np.clip(edge_colors, 0, 1)
+
             h = plt.scatter(x, y,
                             s=self._area,
-                            c=self.style.fill_colors[i],  # Apply color function.
-                            edgecolors=self.style.line_colors[i],
+                            c=fill_colors,
+                            # edgecolors=edge_colors,
                             alpha=0.75)
             handles.append(h)
 

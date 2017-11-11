@@ -16,12 +16,6 @@ class LineChart(Graph):
 
         self._legend_labels = []
 
-    def legends(self, legend_labels, position=None):
-        """."""
-        self._legend_labels = legend_labels
-
-        return self
-
     def data(self, lines):
         """Set the data for the lines to be plotted."""
         # Check data format.

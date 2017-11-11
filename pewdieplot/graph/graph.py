@@ -112,6 +112,12 @@ class Graph(object):
         self._label_color = color
         return self
 
+    def legends(self, legend_labels, position=None):
+        """."""
+        self._legend_labels = legend_labels
+
+        return self
+
     def _prepare_plot(self, x_min, x_max, y_min, y_max):
         plt.close()  # ??
 
@@ -182,7 +188,6 @@ class Graph(object):
         ax.set_ylabel(self._ylabel)
         ax.xaxis.label.set_color(self._label_color)
         ax.yaxis.label.set_color(self._label_color)
-
 
     def pyplot(self, function_name, *args, **kwargs):
         """Call a function from the PyPlot library."""
