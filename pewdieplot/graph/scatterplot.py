@@ -49,15 +49,16 @@ class ScatterPlot(Graph):
         for i, ps in enumerate(points):
             x, y = zip(*ps)
 
-            fill_colors = self._color_function(self.style.fill_colors[i], ps)
+            fill_colors = self._color_function(self.style.line_colors[i], ps)
+            fill_colors = self.style.line_colors * 1.3
+            fill_colors = np.clip(fill_colors, 0.0, 1.0)
             # Use darkened fill color for edges.
-            edge_colors = fill_colors ** 0.8
-            edge_colors = np.clip(edge_colors, 0, 1)
+            edge_colors = self.style.line_colors * 0.9
 
             h = plt.scatter(x, y,
                             s=self._area,
                             c=fill_colors,
-                            # edgecolors=edge_colors,
+                            edgecolors=edge_colors,
                             alpha=0.75)
             handles.append(h)
 

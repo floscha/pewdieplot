@@ -36,6 +36,10 @@ class BarChart(Graph):
         y_min, y_max = np.min(bar_data), np.max(bar_data)
         self._prepare_plot(x_min, x_max, y_min, y_max)
 
+        fill_colors = self.style.line_colors * 1.3
+        fill_colors = np.clip(fill_colors, 0.0, 1.0)
+        darkened_line_colors = self.style.line_colors * 0.9
+
         # Has to be just before plot()?
         # plt.xticks(rotation=90)
         handles = []
@@ -48,8 +52,8 @@ class BarChart(Graph):
             bar_positions = bar_positions - 0.3
             h = plt.bar(bar_positions, bars,
                         bar_width,
-                        color=self.style.fill_colors[i],
-                        edgecolor=self.style.line_colors[i],
+                        color=fill_colors[i],
+                        edgecolor=darkened_line_colors[i],
                         alpha=1.)
             handles.append(h)
 
