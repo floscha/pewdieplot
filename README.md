@@ -48,3 +48,18 @@ PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
 ```
 
 ![alt text](./images/barchart_example.png)
+
+
+## Build
+
+From the root folder of the project, simply install using:
+
+```
+$ pip install .
+```
+
+Then in your Python code simply import using:
+
+```python
+import pewdieplot
+```
