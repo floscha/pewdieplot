@@ -1,6 +1,4 @@
 import unittest
-import sys
-sys.path.append('../pewdieplot')
 
 from pewdieplot.graph.barchart import BarChart
 
