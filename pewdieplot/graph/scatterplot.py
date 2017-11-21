@@ -50,10 +50,10 @@ class ScatterPlot(Graph):
             x, y = zip(*ps)
 
             fill_colors = self._color_function(self.style.line_colors[i], ps)
-            fill_colors = self.style.line_colors * 1.3
+            fill_colors = fill_colors * 1.3
             fill_colors = np.clip(fill_colors, 0.0, 1.0)
             # Use darkened fill color for edges.
-            edge_colors = self.style.line_colors * 0.9
+            edge_colors = fill_colors * 0.9
 
             h = plt.scatter(x, y,
                             s=self._area,
