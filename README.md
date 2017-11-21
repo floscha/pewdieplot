@@ -19,7 +19,7 @@ PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
  ).show()
 ```
 
-![alt text](./images/linechart_example.png)
+![alt text](./examples/images/linechart_example.png)
 
 ### Scatter Plot Example
 ```python
@@ -33,7 +33,7 @@ PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
  ).show()
 ```
 
-![alt text](./images/scatterplot_example.png)
+![alt text](./examples/images/scatterplot_example.png)
 
 ### Bar Chart Example
 ```python
@@ -47,7 +47,7 @@ PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
  ).show()
 ```
 
-![alt text](./images/barchart_example.png)
+![alt text](./examples/images/barchart_example.png)
 
 
 ## Build
