@@ -198,8 +198,12 @@ class Graph(object):
 
     def save(self, path):
         """Save the graph under the specified file path."""
-        raise NotImplementedError("Save function not implemented.")
+        plt.savefig(path)
+
+        return self
 
     def show(self):
         """Display the graph."""
         plt.show()
+
+        return self
