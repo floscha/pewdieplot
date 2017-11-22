@@ -1,12 +1,14 @@
-"""."""
+"""Module for the Graph abstract class."""
+from abc import ABC
+
 import matplotlib.pyplot as plt
 import numpy as np
 
 from ..styles.style import Style
 
 
-class Graph(object):
-    """."""
+class Graph(ABC):
+    """Abstract base class for all kind of graphs."""
 
     def __init__(self,
                  title=None,
