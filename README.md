@@ -4,6 +4,8 @@ PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
 
 ## Examples
 
+All examples can be found as Jupyter notebooks in the [examples](https://github.com/floscha/pewdieplot/tree/master/examples) folder.
+
 ### Line Chart Example
 ```python
 (LineChart('Line Chart Example', size=(8, 5))
