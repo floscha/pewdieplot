@@ -1,9 +1,9 @@
 """Module for the ScatterPlot class."""
-# FIXME(RelativeImports) Get rid of relative imports.
-from .graph import Graph
-
 import matplotlib.pyplot as plt
 import numpy as np
+
+# FIXME(RelativeImports) Get rid of relative imports.
+from .graph import Graph
 
 
 class ScatterPlot(Graph):
@@ -45,21 +45,24 @@ class ScatterPlot(Graph):
         y_min, y_max = min(y), max(y)
         self._prepare_plot(x_min, x_max, y_min, y_max)
 
+        # Load colors.
+        colors = np.array(self.style.line_colors.get_rgb_colors(len(points))) / 255
+
         handles = []
         for i, ps in enumerate(points):
             x, y = zip(*ps)
 
-            fill_colors = self._color_function(self.style.line_colors[i], ps)
-            fill_colors = fill_colors * 1.3
-            fill_colors = np.clip(fill_colors, 0.0, 1.0)
+            fill_colors = self._color_function(colors[i], ps)
+            # fill_colors = fill_colors * 1.3
+            # fill_colors = np.clip(fill_colors, 0.0, 1.0)
             # Use darkened fill color for edges.
-            edge_colors = fill_colors * 0.9
+            edge_colors = fill_colors * 0.8
 
             h = plt.scatter(x, y,
                             s=self._area,
                             c=fill_colors,
                             edgecolors=edge_colors,
-                            alpha=0.75)
+                            alpha=0.7)
             handles.append(h)
 
         if self._legend_labels:

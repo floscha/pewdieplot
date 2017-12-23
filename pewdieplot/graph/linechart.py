@@ -27,12 +27,8 @@ class LineChart(Graph):
         if len(lines.shape) == 3 and lines.shape[1] == 2:
             lines = lines.reshape(1, -1, 2)
 
-        # Calculate boundries and prepare the plot using them
-        # x_min = min(min(l[0]) for l in lines)
-        # x_max = max(max(l[0]) for l in lines)
-        # y_min = min(min(l[1]) for l in lines)
-        # y_max = max(max(l[1]) for l in lines)
-        # self._prepare_plot(x_min, x_max, y_min, y_max)
+        # Load colors.
+        colors = np.array(self.style.line_colors.get_rgb_colors(len(lines))) / 255
 
         self._prepare_plot(0, 2 * np.pi, -1, 1)
 
@@ -40,7 +36,7 @@ class LineChart(Graph):
         for i, line in enumerate(lines):
             x, y = line[:, 0], line[:, 1]
             h, = plt.plot(x, y,
-                          c=self.style.line_colors[i],
+                          c=colors[i],
                           lw=3,
                           alpha=0.7)
             handles.append(h)
