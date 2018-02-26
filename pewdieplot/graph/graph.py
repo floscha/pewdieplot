@@ -4,7 +4,7 @@ from abc import ABC
 import matplotlib.pyplot as plt
 import numpy as np
 
-from ..styles.style import Style
+from styles.style import Style
 
 
 class Graph(ABC):
