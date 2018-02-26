@@ -1,6 +1,6 @@
 # PewDiePlot
 
-PewDiePlot is a high-level API for Pyplot to easily create beautiful graphs.
+PewDiePlot is a object-oriented high-level API for Pyplot to easily create beautiful graphs.
 
 ## Examples
 
