@@ -2,8 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# FIXME(RelativeImports) Get rid of relative imports.
-from .graph import Graph
+from graph import Graph
 
 
 class ScatterPlot(Graph):

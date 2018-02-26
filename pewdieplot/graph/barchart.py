@@ -1,6 +1,5 @@
 """Module for the LineChart class."""
-# FIXME(RelativeImports) Get rid of relative imports.
-from .graph import Graph
+from graph import Graph
 
 import matplotlib.pyplot as plt
 import numpy as np
