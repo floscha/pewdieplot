@@ -7,7 +7,7 @@ import numpy as np
 
 
 class LineChart(Graph):
-    """."""
+    """A `Graph` displaying one more multiple lines."""
 
     def __init__(self, *args, **kwargs):
         """Initialize the LineChart object."""
