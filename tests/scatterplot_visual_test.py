@@ -1,6 +1,6 @@
 import numpy as np
 
-from pewdieplot.graph.scatterplot import ScatterPlot
+from pewdieplot.graph import ScatterPlot
 
 points_00 = np.random.multivariate_normal([0, 0], [[0.2, 0], [0, 0.2]], 200)
 points_22 = np.random.multivariate_normal([2, 2], [[0.2, 0], [0, 0.2]], 200)
