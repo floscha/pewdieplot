@@ -1,4 +1,4 @@
-"""."""
+"""Module for the Style class."""
 import os
 import yaml
 
