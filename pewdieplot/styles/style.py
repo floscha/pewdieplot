@@ -2,8 +2,6 @@
 import os
 import yaml
 
-import numpy as np
-
 from util.color_wheel import ColorWheel
 
 
