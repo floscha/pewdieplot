@@ -6,7 +6,7 @@ from graph import Graph
 
 
 class BarChart(Graph):
-    """."""
+    """A basic bar chart implementation."""
 
     def __init__(self, *args, **kwargs):
         """Initialize the BarChart object."""
