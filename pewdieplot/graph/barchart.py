@@ -1,4 +1,4 @@
-"""Module for the LineChart class."""
+"""Module for the BarChart class."""
 from graph import Graph
 
 import matplotlib.pyplot as plt
