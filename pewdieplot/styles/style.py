@@ -4,7 +4,7 @@ import yaml
 
 import numpy as np
 
-from ..util.color_wheel import ColorWheel
+from util.color_wheel import ColorWheel
 
 
 class Style(object):
