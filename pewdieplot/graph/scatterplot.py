@@ -6,7 +6,7 @@ from graph import Graph
 
 
 class ScatterPlot(Graph):
-    """."""
+    """A basic scatter plot implementation."""
 
     def __init__(self, *args, **kwargs):
         """Initialize the ScatterPlot object."""
