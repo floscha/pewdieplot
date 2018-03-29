@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from styles.style import Style
+from util.savable_graph import SavableGraph
 
 
 class Graph(ABC):
@@ -203,6 +204,20 @@ class Graph(ABC):
         plt.savefig(path)
 
         return self
+
+    def save_as(self, file_path):
+        """Save the graph to disk.
+
+        Args:
+            file_path (str): The file to be created without extension.
+
+        Returns:
+            A SavableGraph object.
+
+        Example:
+            graph.save_as('bar_chart').png()
+        """
+        return SavableGraph(self, file_path)
 
     def show(self):
         """Display the graph."""
